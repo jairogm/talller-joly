@@ -1,0 +1,14 @@
+extends ../layout/index
+
+block formulario
+  form(class='formulario' action="/producto/registro" method="POST") 
+    input(class='form-item' id="nombre" name="nombre" placeholder="Nombre" type="text" value= usuario ? usuario.nombre : '')
+    input(class='form-item' id="precio" name="precio" placeholder="precio" type="number")
+    input(class='form-item' id="referencia" name="referencia" placeholder="referencia" type="text")
+    input(class='form-item' id="cantidad" name="cantidad" placeholder="cantidad" type="number")
+    input(class='form-item' id="descripcion" name="descripcion" placeholder="descripcion" type="text")
+    input(class='btnGuardar' id="btnGuardar" value="guardar" type="submit")
+  if errores 
+    section(class='errores')
+      each error in errores
+        p.error=error.msg
