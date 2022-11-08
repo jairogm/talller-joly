@@ -36,6 +36,11 @@ main {
     height: 80vh;
 }
 
+.logo{
+    width: 260px;
+    height: 100px;
+}
+
 .sidebar {
     width: 200px;
     height: 100vh;
